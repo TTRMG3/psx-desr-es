@@ -1,7 +1,7 @@
 # PSX DESR ES-EN
 
-Traducción dual inglés–español para la interfaz XMB de Sony PSX DESR, basada en
-los recursos de idioma dual de Vitas155
+Traducción dual español-inglés para la interfaz XMB de Sony PSX DESR, basada en
+los recursos de idioma dual de Vitas155 originalmente realizado en ruso-inglés.
 
 ## Estado
 
@@ -34,11 +34,12 @@ Así se evita que la opción japonesa cargue ruso.
 2. Guarda una copia de todos los archivos originales que vayas a sustituir.
 3. Instala `psx_desr_2.11_en_es_v0.9.1_RUTAS_CORREGIDAS.zip`, conservando su
    estructura de carpetas. Es el paquete recomendado.
-4. Copia `system/dic/` a `system/dic/` de la consola y
-   `system/xosd/packages/` a `system/xosd/packages/`. **La carpeta `dic`
+4. Copia `system/dic/` a `__system/dic/` de el disco duro de la consola y
+   `system/xosd/packages/` a `__system/xosd/packages/`. **La carpeta `dic`
    global no va dentro de `packages`.**
 5. En HDD-OSD selecciona **Japanese** para activar el español. Selecciona
-   **English** para volver íntegramente al inglés.
+   **English** para volver íntegramente al inglés. Para descargar HDD-OSD y
+   aprender a instalarlo dirígete a https://github.com/samicrusader/psx-osdsys/
 
 La versión 0.9.1 ya incorpora el arreglo del banco japonés, Easy Setup y la
 reserva inglesa de los módulos que aún no están traducidos. Es el único paquete
@@ -59,7 +60,7 @@ de instalación publicado para evitar confusiones.
 Creado por **Teo Tormo** y **Jarvis**.
 
 La base del mecanismo de idioma dual y el trabajo previo pertenecen a
-**Vitas**. Este proyecto es una traducción comunitaria e independiente; no está
-afiliado a Sony ni a Vitas.
+**Vitas155**. Este proyecto es una traducción comunitaria e independiente; no está
+afiliado a Sony ni a Vitas155.
 
 Sony, PSX y PlayStation son marcas de sus respectivos propietarios.
