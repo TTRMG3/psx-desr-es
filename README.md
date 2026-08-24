@@ -1,7 +1,7 @@
 # PSX DESR ES-EN
 
 Traducción dual inglés–español para la interfaz XMB de Sony PSX DESR, basada en
-los recursos de idioma dual de Vitas.
+los recursos de idioma dual de Vitas155
 
 ## Estado
 
