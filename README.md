@@ -1,7 +1,26 @@
-[README_RC10_SOLO_FIRMWARE_2.11.md](https://github.com/user-attachments/files/31530862/README_RC10_SOLO_FIRMWARE_2.11.md)
+[README_RC10_SOLO_FIRMWARE_2.11-2.md](https://github.com/user-attachments/files/31531174/README_RC10_SOLO_FIRMWARE_2.11-2.md)
 # PSX DESR en español — RC10
 
 Traducción experimental del XMB al español para PSX DESR de segunda generación.
+
+## Alcance del proyecto
+
+RC10 modifica **323 archivos de sistema**:
+
+- 150 diccionarios `.dic`
+- 149 archivos `.xml`
+- 23 imágenes `.png`
+- 1 recurso `.rgn`
+
+El archivo incluye además 9 documentos de texto con notas de versiones y pruebas. No se modifican ejecutables `.rel`.
+
+El trabajo acumulado de traducción, adaptación, empaquetado, restauraciones y pruebas en consola ha requerido aproximadamente **40–60 horas**.
+
+## Principio de diseño
+
+La intención no es rediseñar la PSX DESR ni convertirla en una interfaz moderna: es hacer comprensible su XMB conservando la identidad visual, la estructura y el comportamiento de Sony.
+
+Se respetan las rutas originales, los módulos existentes, los iconos y gráficos que no necesitan texto, y la disposición de la interfaz. Solo se sustituyen recursos de idioma y los gráficos que contienen texto japonés cuando hacerlo no altera el diseño ni la función prevista por el sistema.
 
 ## Compatibilidad
 
@@ -77,3 +96,111 @@ Si después de una instalación el XMB no arranca correctamente, restaura las ca
 No se ofrece garantía ni recuperación individual ante averías, pérdidas de datos, instalaciones incompletas o transferencias fallidas. Tampoco se presta soporte técnico por mensajes privados o redes sociales.
 
 Los informes técnicos reproducibles que indiquen modelo exacto, firmware, método de instalación y disponibilidad de copia de seguridad pueden ayudar a mejorar futuras versiones.
+
+## Créditos
+
+Creado por [Teo Tormo](https://www.arcadeartisan.com) y su fiel amigo Jarvis.
+
+---
+
+# PSX DESR in Spanish — RC10
+
+Experimental Spanish translation of the XMB for second-generation PSX DESR systems.
+
+## Project scope
+
+RC10 modifies **323 system files**:
+
+- 150 `.dic` dictionaries
+- 149 `.xml` files
+- 23 `.png` images
+- 1 `.rgn` resource
+
+The archive also includes 9 text documents containing release and testing notes. No `.rel` executables are modified.
+
+The combined translation, adaptation, packaging, restoration and on-console testing work represents approximately **40–60 hours**.
+
+## Design principle
+
+The aim is not to redesign the PSX DESR or turn it into a modern interface. It is to make its XMB understandable while preserving Sony's visual identity, structure and behaviour.
+
+Original paths, existing modules, icons and graphics that do not need text are retained, as is the interface layout. Only language resources and graphics containing Japanese text are replaced, and only where doing so does not alter the intended design or system function.
+
+## Compatibility
+
+This release is intended **exclusively** for DESR-5500, DESR-5700, DESR-7500 and DESR-7700 systems running firmware **2.11**.
+
+Full functional validation has been carried out on a DESR-7500 running firmware 2.11: Memory Stick copy, its icon, DVD copy and the remaining video functions appear and work correctly, with no mismatch between menu entries and actions.
+
+### Firmware 2.06: not compatible
+
+Do not install RC10 on firmware 2.06. On a DESR-7500 running 2.06, the XMB does boot, but the Memory Stick copy feature disappears and the video-function menu becomes misaligned: labels and icons may still be visible, but several entries open the action below the one selected. The final item in the list may become inaccessible.
+
+In other words: it may look as if it works, but you will lose one function and three or four others will be shifted from their real action.
+
+### Firmware 2.10: pending testing
+
+Compatibility with firmware 2.10 has not yet been validated. There are indications it may behave like 2.11, but this must not be interpreted as a guarantee and it should not be installed until testing has been completed on a dedicated test console.
+
+## Warning and responsibility
+
+This project is provided free of charge, experimentally and without warranty. It is not official Sony software and you install it entirely at your own risk.
+
+It is intended for people who already know how to make complete backups, restore a PSX DESR system and react calmly to a failed file transfer. If you do not have a backup, do not know how to restore it, or cannot accept the possibility of having to repeat the procedure, do not install this release.
+
+Large transfers to the HDD of a PSX DESR through wLaunchELF/uLaunchELF may freeze or fail seemingly at random even when the instructions are followed correctly. This risk is inherent to the installation process.
+
+## Before installing: mandatory backup
+
+Make a complete backup of all partitions and files on your PSX DESR HDD before changing anything.
+
+At minimum, keep a complete copy outside the console of:
+
+- `hdd0:/__system/dic/`
+- `hdd0:/__system/xosd/packages/`
+
+Do not continue without that backup. Copying the new files over the old ones does not remove leftover files and is not a substitute for a complete restoration of the original folders.
+
+## Installation
+
+You need a reliable method of running wLaunchELF/uLaunchELF and a USB drive prepared for your console.
+
+1. Download the RC10 release and extract it to the USB drive.
+2. Open the release's `dic/` folder.
+3. Copy its contents to:
+
+   ```text
+   hdd0:/__system/dic/
+   ```
+
+4. Open `xosd/packages/` in the release.
+5. Select and copy **all folders** contained there.
+6. Paste them into:
+
+   ```text
+   hdd0:/__system/xosd/packages/
+   ```
+
+7. Confirm every overwrite prompt with `OK`.
+8. Wait until the transfer has completed fully. Do not leave the file manager, restart, power off or disconnect power while the copy is in progress.
+9. Once it has finished without errors, restart the PSX DESR and check the XMB.
+
+## If copying freezes or fails
+
+Do not jump to conclusions: a large operation may appear frozen for several minutes.
+
+- If it appears frozen, wait several minutes to see whether it completes on its own.
+- If it recovers and shows `Paste failed`, restart the PSX DESR and repeat **the entire** copy process from the beginning.
+- If it does not recover, force a shutdown by holding the `POWER` button for a few seconds. Then repeat the complete copy procedure.
+
+If the XMB does not start correctly after installation, restore the complete `dic` and `xosd/packages` folders from the original backup; do not try to repair it by copying individual files at random.
+
+## Support
+
+No warranty or individual recovery assistance is provided for hardware failures, data loss, incomplete installations or failed transfers. Technical support is not provided through private messages or social media.
+
+Reproducible technical reports that include the exact model, firmware, installation method and confirmation that a backup exists can help improve later release candidates.
+
+## Credits
+
+Created by [Teo Tormo](https://www.arcadeartisan.com) and his faithful friend Jarvis.
